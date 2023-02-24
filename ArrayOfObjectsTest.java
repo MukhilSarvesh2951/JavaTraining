@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class ArrayOfObjectsTest {
 	public static void main(String[] args) {
@@ -7,16 +8,19 @@ public class ArrayOfObjectsTest {
 		CricketPlayer player3=new CricketPlayer(1,"Dravid",14000,5,40,800,2500,"India",100);
 		CricketPlayer player4=new CricketPlayer(2,"Kohli",16000,60,33,900,1907,"India",200);
 		
-		CricketPlayer teamIndia[]=new CricketPlayer[11];
+		ArrayList teamIndiaList=new ArrayList();
 		
-		teamIndia[0]= player1;
-		teamIndia[1]= player2;
-		teamIndia[2]= player3;
-		teamIndia[3]= player4;
+		teamIndiaList.add(player1);
+		teamIndiaList.add(player2);
+		teamIndiaList.add(player3);
+		teamIndiaList.add(player4);
+		
+		
+		
 		try {
-		for (int i = 0; i < teamIndia.length; i++) {
-			System.out.println(teamIndia[i]);
-			teamIndia[i].toString();
+		for (int i = 0; i < teamIndiaList.size(); i++) {
+			System.out.println(teamIndiaList.get(i));
+			teamIndiaList.get(i).toString();
 			System.out.println("--------------");
 			
 		}
