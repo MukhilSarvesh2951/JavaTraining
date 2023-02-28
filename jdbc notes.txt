@@ -1,0 +1,81 @@
+
+java.sql
+----------
+
+		JDBC 
+
+
+			Java DataBase Connectivity
+
+
+				Driver
+		frontend			backend
+		|				|
+		java				oracle
+						mysql
+						ms-sql
+						sybase
+						db2
+						mongodb
+						...
+						...
+
+
+	following is not an inheritance diagram
+
+
+
+					Driver(i)
+					 |  |
+					 | ---------------------------
+					 |  |            |         |
+					 | oracle	mysql	  ms-sql <-- implementations
+					 |		
+				  DriverManager
+					 | 1. load/register the driver | com.mysql.jdbc.Driver
+					 | 2. connect to the db        | jdbc:mysql://hostname/mysql
+			--------------------------------
+				|
+				Connection(i)
+				|3. make desired statement
+		-----------------------------------------------
+		|		|			|
+		Statement(i)	PreparedStatement(i)  CallableStatement(i)
+		select		insert/update/delete	procedure/function
+
+	1. load the driver
+	2. connect to the db
+	3. make the desired statement (select)
+	4. run that statement and acquire the result if any
+	5. process the ResultSet
+	6. close the result, close statement, close the db conn
+
+
+
+
+
+							DB <----database layer
+							|
+				web application [ java program ] <-- business layer
+				|
+				|
+		------------------------------------
+		|	|	|	|	|
+		cl1	cl2.	cl3...		 <---------------------presentation layer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
