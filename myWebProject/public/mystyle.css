@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+h1{
+	background-color:red;
+	color:blue;
+}
+h2{
+	background-color:green;
+	color:yellow;
+}
+body{
+	background-image:url('96865237.jpg');
+	background-repeat:no-repeat;
+	background-size :cover;
+}
